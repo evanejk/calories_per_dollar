@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calories Per Dollar</string>
+    <string name="servings_per_container">servings per container: </string>
+    <string name="calories">calories: </string>
+    <string name="price_per_container">price per container: </string>
+    <string name="enter_number">enter a number</string>
+    <string name="compute">compute</string>
+    <string name="output">____ calories per dollar</string>
+    <string name="clear">clear</string>
+
+
+</resources>
