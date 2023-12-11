@@ -35,7 +35,7 @@ class WeightLossCalcActivity : AppCompatActivity() {
                 var caloriesPerServing = editTextCalories.getText().toString().toDouble()
                 var score = netWeight / (servingsPerContainer * caloriesPerServing)
                 score = score * 10
-                textViewResults.setText("$score dag/c")
+                textViewResults.setText("$score g/10cals")
             }
         }
         buttonClear.setOnClickListener{
@@ -43,7 +43,7 @@ class WeightLossCalcActivity : AppCompatActivity() {
             editTextServings.setText("")
             editTextCalories.setText("")
             editTextNetWeight.requestFocus()
-            textViewResults.setText("____ dag/c")
+            textViewResults.setText("____ g/10cals")
         }
     }
 }
