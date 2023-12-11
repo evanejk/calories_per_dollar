@@ -1,5 +1,6 @@
 package com.happynicetime.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextNumberInputCalories: EditText
     private lateinit var editTextNumberInputPrice: EditText
     private lateinit var textViewResults: TextView
+    private lateinit var buttonWeightLossCalc: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,6 +52,11 @@ class MainActivity : AppCompatActivity() {
             editTextNumberInputPrice.requestFocus()
             textViewResults.setText("____ calories per dollar")
         }
-
+        buttonWeightLossCalc = findViewById<Button>(R.id.buttonWeightLossCalculator)
+        buttonWeightLossCalc.setOnClickListener(){
+            //println("wlc button pressed")
+            val intent: Intent = Intent(this, WeightLossCalcActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
