@@ -7,8 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 class WeightLossCalcActivity : AppCompatActivity() {
-    private lateinit var editTextNetWeight: EditText
-    private lateinit var editTextServings: EditText
+    private lateinit var editTextWeight: EditText
     private lateinit var editTextCalories: EditText
     private lateinit var textViewResults: TextView
     private lateinit var buttonCompute: Button
@@ -17,8 +16,7 @@ class WeightLossCalcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wight_loss_calc)
-        editTextNetWeight = findViewById<EditText>(R.id.numberNetWeightWL)
-        editTextServings = findViewById<EditText>(R.id.numberServingsPerContainerWL)
+        editTextWeight = findViewById<EditText>(R.id.numberWeightWL)
         editTextCalories = findViewById<EditText>(R.id.numberCaloritesWL)
         textViewResults = findViewById<TextView>(R.id.textViewWeightLossScore)
         buttonCompute = findViewById<Button>(R.id.buttonComputeWL)
@@ -27,22 +25,20 @@ class WeightLossCalcActivity : AppCompatActivity() {
         buttonCompute.setOnClickListener{
             //println("clicked on button")
             // Check if any EditText fields are empty
-            if (editTextNetWeight.getText().isEmpty() || editTextServings.getText().isEmpty() || editTextCalories.getText().isEmpty()) {
+            if (editTextWeight.getText().isEmpty() || editTextCalories.getText().isEmpty()) {
                 textViewResults.setText("please enter values for all fields");
             }else {
-                var netWeight = editTextNetWeight.getText().toString().toDouble()
-                var servingsPerContainer = editTextServings.getText().toString().toDouble()
+                var weight = editTextWeight.getText().toString().toDouble()
                 var caloriesPerServing = editTextCalories.getText().toString().toDouble()
-                var score = netWeight / (servingsPerContainer * caloriesPerServing)
+                var score = weight / caloriesPerServing
                 score = score * 10
                 textViewResults.setText("$score g/10cals")
             }
         }
         buttonClear.setOnClickListener{
-            editTextNetWeight.setText("")
-            editTextServings.setText("")
+            editTextWeight.setText("")
             editTextCalories.setText("")
-            editTextNetWeight.requestFocus()
+            editTextWeight.requestFocus()
             textViewResults.setText("____ g/10cals")
         }
     }

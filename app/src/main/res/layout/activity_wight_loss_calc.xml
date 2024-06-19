@@ -10,23 +10,13 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/net_weight"
+        android:text="@string/weight"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/numberNetWeightWL"
+        app:layout_constraintEnd_toStartOf="@+id/numberWeightWL"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/servings_per_container"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/numberServingsPerContainerWL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textView6"
@@ -35,12 +25,13 @@
         android:text="@string/calories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/numberCaloritesWL"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.072" />
 
     <EditText
-        android:id="@+id/numberNetWeightWL"
+        android:id="@+id/numberWeightWL"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="@string/enter_number"
@@ -53,19 +44,6 @@
         app:layout_constraintVertical_bias="0.017" />
 
     <EditText
-        android:id="@+id/numberServingsPerContainerWL"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:hint="@string/enter_number"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberNetWeightWL"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <EditText
         android:id="@+id/numberCaloritesWL"
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -76,7 +54,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberServingsPerContainerWL" />
+        app:layout_constraintTop_toBottomOf="@+id/numberWeightWL"
+        app:layout_constraintVertical_bias="0.187" />
 
     <Button
         android:id="@+id/buttonComputeWL"

@@ -8,7 +8,7 @@
     <string name="output">____ calories per dollar</string>
     <string name="clear">clear</string>
     <string name="weight_loss_calculator">weight loss calculator</string>
-    <string name="net_weight">net weight (_g)</string>
+    <string name="weight">serving size (g or ml)</string>
     <string name="higher_score_more_weight_loss">higher score = more weight loss</string>
     <string name="weight_loss_score">weight loss score</string>
 
